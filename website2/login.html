@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery| About US</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+</head>
+
+<body>
+    <nav class="nav nav_top" style="box-shadow: inset 4px 4px 16px 10px rgb(82, 2, 42);">
+        <div class="logo">
+            <a href="project3.html"><img src="logo.png" width="50px"></a>
+        </div>
+        <div class="nav_side">
+            <!-- <a href="home.html">Home</a> -->
+            <a href="about us.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login/Register</a>
+        </div>
+    </nav>
+
+
+    <div class="login">
+       
+        <h2>Registration Form</h2>
+        <div class="login_form">
+            <form onsubmit="return validation()" name="submit-googlesheet" method="post">
+                <input type="text" name="Name" id="name" placeholder="Name"><br>
+                <span id="errorname" style="color: red;"></span>
+                <input type="email" name="Email" id="email" placeholder="Email id"><br>
+                <span id="errorname" style="color: red;"></span>
+                <input type="number" name="Number" id="number" placeholder="Contact Number"><br>
+                <span id="errorname" style="color: red;"></span>
+                <input type="address" name="Address" id="address" placeholder="Address"><br>
+                <span id="errorname" style="color: red;"></span>
+                <button type="login">Login</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">
+            <a href="project3.html"><img src="logo.png" width="40px"></a>
+        </div>
+        <br>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about us.html">About Us</a>|
+            <a href="Service.html">Services</a>|
+            <a href="blog.html">Email</a>|
+            <a href="login.html">Login</a>|
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>follow Us</h3>
+            <a href="https://www.facebook.com/zomato/" target="_blank"><i class="fa fa-facebook-square"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/zomato/?hl=en" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/zomato/?originalSubdomain=in" target="_blank"><i
+                    class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/zomato?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://api.WhatsApp.com/send?phone=+919648935712" target="_blank"><i class="fa fa-whatsapp"
+                    aria-hidden="true"></i></a>
+            <a href="tel: +919734672130" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto: help@zomato.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+        <hr>
+        <p>Copright &copy; 2022 Foodie.com. All rights reserved!</p>
+    </footer>
+
+    <script type="text/javascript">
+         
+     function validation()
+     {
+         var name = document.getElementById('name').value;
+         var email = document.getElementById('email').value;
+         var number = document.getElementById('number').value;
+         var address = document.getElementById('address').value;
+
+         var namecheck=/^[A-Za-Z]{3,30}$/;
+         var emailcheck=/^[A-A-Za-Z_0-9]{3, }@[A-Za-z]{3, }[.]{1}[A-Za-z.]{2,6}$/;
+         var numbercheck=/^[6789][0-9]{9}$/;
+         var address=/^[A-A-Za-Z][0-9][.]{3,30}$/;
+
+         if(namecheck.test(Name))
+         {
+         document.getElementById('errorname').innerHTML=" ";
+     }
+       else
+       {
+       document.getElementById('errorname').innerHTML="Invalid Name ";
+       return false;
+       }
+
+         if(emailcheck.test(Email))
+         {
+         document.getElementById('errorname').innerHTML=" ";
+     }
+       else
+       {
+       document.getElementById('errorname').innerHTML="Invalid Email ";
+       return false;
+       }
+         if(numbercheck.test(Number))
+         {
+         document.getElementById('errorname').innerHTML=" ";
+     }
+       else
+       {
+       document.getElementById('errorname').innerHTML="Invalid Number ";
+       return false;
+       }
+         if(addresscheck.test(Address))
+         {
+         document.getElementById('errorname').innerHTML=" ";
+     }
+       else
+       {
+       document.getElementById('errorname').innerHTML="Invalid Address ";
+       return false;
+       }
+    }
+     </script>
+             <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzUbPeeVZdutu3zivm9j9tnzAq6ZTKlTUGD3eXz1rU-R6IOojNPWSIL2uXrayykJMyi0Q/exec'
+        const form = document.forms['submit-googlesheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you for login, Enjoy the best service here.."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
